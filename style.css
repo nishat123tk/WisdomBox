@@ -1,17 +1,28 @@
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
   background: #0b0b0b;
-  color: #e5e5e5;
+  color: #eaeaea;
 }
 
 /* NAVBAR */
 .navbar {
+  background: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: #000;
+  padding: 15px 25px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #ff3333;
+  font-weight: bold;
 }
 
 .navbar ul {
@@ -21,50 +32,70 @@ body {
 }
 
 .navbar a {
-  color: #e5e5e5;
+  color: #eaeaea;
   text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #000, #120000);
+  padding: 90px 20px;
+  background: radial-gradient(circle, #120000, #000);
 }
 
-.hero h2 {
-  font-size: 2.2rem;
-  color: #ff4444;
+.hero h1 {
+  font-size: 2.6rem;
+  color: #ff3333;
 }
 
-/* SECTIONS */
+.hero p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* SECTION */
 .section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
 .section h2 {
-  color: #ff4444;
+  color: #ff3333;
+  margin-bottom: 20px;
 }
 
 .dark {
   background: #050505;
 }
 
-/* STORY */
+/* STORY CARD */
 .story-card {
   background: #111;
   padding: 20px;
-  margin-top: 20px;
-  border-left: 4px solid #ff4444;
+  margin-bottom: 20px;
+  border-left: 4px solid #ff3333;
 }
 
 /* WRITERS */
 .writer-card {
   background: #111;
   padding: 15px;
-  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* YOUTUBE */
+iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border: none;
 }
 
 /* FOOTER */
@@ -73,4 +104,22 @@ body {
   padding: 20px;
   background: #000;
   font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
