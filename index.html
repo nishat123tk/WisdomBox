@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetAbstract Clone - Business Book Summaries</title>
+    <title>StoryShots Clone - Quick Book Summaries</title>
     <style>
         /* Reset and base styles */
         * {
@@ -23,7 +23,7 @@
         }
         /* Header styles */
         header {
-            background-color: #007bff;
+            background-color: #ff6b35;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -38,7 +38,7 @@
         }
         /* Navigation */
         nav {
-            background-color: #0056b3;
+            background-color: #e55a2b;
             padding: 10px 0;
         }
         nav ul {
@@ -55,7 +55,7 @@
             transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #004085;
+            background-color: #cc4a1f;
         }
         /* Main container */
         .container {
@@ -110,7 +110,7 @@
         }
         .summary-card h3 {
             margin-bottom: 10px;
-            color: #007bff;
+            color: #ff6b35;
         }
         .summary-card p {
             margin-bottom: 10px;
@@ -131,7 +131,7 @@
             margin-bottom: 10px;
         }
         footer a {
-            color: #007bff;
+            color: #ff6b35;
             margin: 0 10px;
         }
         /* Responsive design */
@@ -154,14 +154,14 @@
 </head>
 <body>
     <header>
-        <h1>GetAbstract Clone</h1>
-        <p>Unlock the key insights from the world's best business books in minutes.</p>
+        <h1>StoryShots Clone</h1>
+        <p>Get the key takeaways from bestselling books in just 15 minutes.</p>
     </header>
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#summaries">Summaries</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#categories">Categories</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -171,39 +171,39 @@
             <button onclick="searchSummaries()">Search</button>
         </section>
         <section class="summaries" id="summariesList">
-            <!-- Dynamically populated summaries -->
+            <!-- Summaries will be populated here -->
         </section>
     </div>
     <footer>
-        <p>&copy; 2023 GetAbstract Clone. All rights reserved.</p>
+        <p>&copy; 2023 StoryShots Clone. All rights reserved.</p>
         <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
     </footer>
 
     <script>
-        // Sample data for summaries (in a real app, this would come from an API or database)
+        // Sample data for summaries (in a real app, fetch from an API)
         const summaries = [
             {
-                title: "The Lean Startup",
-                author: "Eric Ries",
-                summary: "A guide to building successful startups using lean methodology, focusing on validated learning and iterative development.",
+                title: "The Alchemist",
+                author: "Paulo Coelho",
+                summary: "A shepherd boy's journey to find his personal legend, blending mysticism and adventure.",
                 link: "#"
             },
             {
-                title: "Thinking, Fast and Slow",
-                author: "Daniel Kahneman",
-                summary: "Explores the two systems of thinking: fast, intuitive, and slow, deliberate, and how they shape decisions.",
+                title: "To Kill a Mockingbird",
+                author: "Harper Lee",
+                summary: "A story of racial injustice and moral growth in the American South, seen through a child's eyes.",
                 link: "#"
             },
             {
-                title: "Sapiens: A Brief History of Humankind",
-                author: "Yuval Noah Harari",
-                summary: "A sweeping narrative of human history from the Stone Age to the modern era, examining how Homo sapiens came to dominate the planet.",
+                title: "1984",
+                author: "George Orwell",
+                summary: "A dystopian novel about totalitarianism, surveillance, and the loss of individual freedom.",
                 link: "#"
             },
             {
-                title: "Atomic Habits",
-                author: "James Clear",
-                summary: "Offers practical strategies for building good habits and breaking bad ones through small, incremental changes.",
+                title: "The Catcher in the Rye",
+                author: "J.D. Salinger",
+                summary: "A teenager's cynical view of the adult world and his quest for authenticity.",
                 link: "#"
             }
         ];
@@ -239,14 +239,13 @@
             renderSummaries(filtered);
         }
 
-        // Optional: Add event listener for Enter key in search
+        // Event listener for Enter key
         document.getElementById('searchInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 searchSummaries();
             }
         });
 
-        // Console log for debugging (remove in production)
         console.log("Page loaded with", summaries.length, "summaries.");
     </script>
 </body>
